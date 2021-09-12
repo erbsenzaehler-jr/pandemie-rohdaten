@@ -4,6 +4,8 @@
 
 Marcel Barz hat in einem Video ("Die Pandemie in Rohdaten") dargelegt, dass die Corona-Pandemie nicht in den deutschen Sterbezahlen ersichtlich ist. Da die Quellen des Videos leider nicht verfügbar sind, soll dieses Repository die Berechnungen bereitstellen um die Ergebnisse im Video nachzuvollziehen.
 
+Update zum Video: https://www.youtube.com/watch?v=lRpjUxsHdkg
+
 ### Verwendete Tools
 
 Um die Daten zu bereinigen und aus den Rohdaten zu erzeugen wurde [Python Pandas](https://pandas.pydata.org/) im [Jupyter Notebook](https://jupyter.org/) verwendet, beides gängige Tools um Daten zu analysieren. Beide müssen entsprechend installiert werden, um das Projekt lokal ausführen zu können.
@@ -34,16 +36,30 @@ Der Ordner "source" enthält ein Jupyter Notebook, das die Dateien aus dem asset
 
 Dieser Ordner enthält zwei Dateien. Einerseits die vom Jupyter Notebook erzeugte Datei "relative_sterbedaten.csv", sowie die aufbereitete Datei "relative_sterbedaten.ods", die neben den reinen Daten auch eine visuelle Hervorhebung und ein Ranking der Sterberaten enthält. Die Hervorhebung, sowie das Ranking wurde manuell ergänzt.
 
+## Ausführung
 
-## Vorgehen
+### Technisches Vorgehen
+
+Um das Tool ausführen zu können müssen die Tools installiert sein (siehe "Verwendete Tools").
+
+Anschließend kann Jupyter lokal gestartet werden. Hierfür im Root-Folder folgendes Kommando ausführen:
+
+```cmd
+jupyter notebook --allow-root
+```
+
+In der Konsole wird ein Link geloggt, der im Browser geöffnet werden kann. Man sieht die Jupyter-Oberfläche in der man in den source-Ordner navigieren und das "erbsenzaehler.ipynb" öffnen und ausführen kann.
+
+
+### Logisches Vorgehen
 
 Das Vorgehen ist analog zum Video. Neben dem Bereinigen der Daten (Schaltjahr herausrechnen) und dem Aufbereiten der Daten (relative Sterbedaten berechnen, indem man die Sterbezahlen durch Bevölkerungsstand teilt) wird auch die finale Tabelle (manuell) erstellt, in der das Ranking ersichtlich wird.
 
-### Abweichungen zum Video
+#### Abweichungen zum Video
 
 Abgesehen von fehlenden Datengrundlagen, die das Nachstellen des Videos erschweren (siehe Kapitel "Herausforderungen") gibt es auch Abweichungen zum Video
 
-#### Altesrgruppen
+##### Altesrgruppen
 
 Da die Rohdaten eine granularere Aufteilung der Altersgruppen bereitstellt wird auf eine gröbere Gruppenstruktur (wie im Video) verzichtet, da dies die Daten bereits mit einer unschärfe belegt.
 
